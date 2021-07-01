@@ -1,0 +1,15 @@
+.button {
+-fx-background-radius: 8px;
+    /* -fx-pref-height: 30px;
+    -fx-pref-width: 30px; */
+    /* -height: 30px;
+    -width: 30px; */
+    /* -fx-max-height: 30px;
+    -fx-max-width: 30px; */
+}
+/* .ImageView {
+    -fx-pref-height: 20px;
+    -fx-pref-width: 20px;
+    -height: 28px;
+    -width: 28px;
+} */

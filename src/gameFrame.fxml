@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameFrameController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="42.0" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button ellipsisString="100" mnemonicParsing="false" onMouseClicked="#buildStation" prefHeight="29.0" prefWidth="47.0" text="500">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/station.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#addLocomotive" text="300">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/locomotive.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#addCar" text="200">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/car.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#levelup" text="500">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/levelup.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" text="300">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/repair.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#destroy" text="000">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button disable="true" mnemonicParsing="false" opacity="0.6" text="200">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/railway.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button disable="true" mnemonicParsing="false" opacity="0.6" text="100">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/bridge.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button disable="true" mnemonicParsing="false" opacity="0.6" text="150">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/tunnel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="800.0">
+         <children>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/previous_page.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Region prefHeight="80.0" prefWidth="127.0" HBox.hgrow="ALWAYS" />
+            <ProgressBar fx:id="satisficBar" prefHeight="20.0" prefWidth="287.0" progress="0.0" />
+            <Region prefHeight="80.0" prefWidth="88.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="130.0">
+               <children>
+                  <Text fx:id="gameCalenderTime" strokeType="OUTSIDE" strokeWidth="0.0" text="YY-MM-DD">
+                     <font>
+                        <Font name="Consolas Bold Italic" size="29.0" />
+                     </font>
+                  </Text>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#pause">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@./image/button/pause.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#play">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@./image/button/play.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onMouseClicked="#fastForward">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@./image/button/fast_forward.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="CENTER" prefHeight="520.0" prefWidth="85.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#buildBlueRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_blue.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#buildGreenRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_green.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#buildOrangeRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_orange.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#buildBrownRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_purple.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#buildRedRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_red.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onMouseClicked="#buildYellowRailway">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@./image/button/line_yellow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fx:id="balanceText" strokeType="OUTSIDE" strokeWidth="0.0" text="Balance" textAlignment="CENTER" wrappingWidth="144.7294921875">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Region prefHeight="42.0" prefWidth="155.0" />
+            <Text fill="#b93818" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning Message">
+               <font>
+                  <Font size="22.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Text>
+            <Region />
+         </children>
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane fx:id="myMap" onMouseClicked="#getPosOnAnchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="480.0" fitWidth="667.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/map_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
